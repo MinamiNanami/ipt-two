@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'lato', 'montserrat';
+}
+
+.main-content {
+    /* background-color: aquamarine; */
+    background-image: url("../images/img1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    background-color: #dea705;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+
+.title {
+    margin-right: auto;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 20PX;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    transition: font-size 0.3s;
+}
+
+.header a:hover {
+    font-size: 23.5px;
+}
+
+.search {
+    margin-right: 20px;
+}
+
+.search input[type="text"] {
+    border-radius: 50px 0 0 50px;
+    border: 1px solid #B76E00;
+    height: 32px;
+    padding: 0 10px;
+    background-color: #FFF8E1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search input[type="submit"] {
+    height: 32px;
+    border-radius: 0 50px 50px 0;
+    background-color: black;
+    border: 1px solid black;
+    color: #f1f1f1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #ffc107 ;
+    color: black;
+    transition: background-color 0.3s;
+    transition: color 0.3s;
+    transition: border 0.3s;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    /* background-color: darkseagreen; */
+    height: 90%;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 18%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color:white
+}
+
+.sidebar a:hover {
+    color: black;
+}
+
+.sidebar ul {
+    align-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-colo r 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #ffc107;
+}
+
+.sidebar ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.dynamic {
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 97%;
+    width: 82%;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
