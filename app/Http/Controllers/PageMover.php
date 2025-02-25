@@ -44,4 +44,9 @@ class PageMover extends Controller
     {
         return view('test2');
     }
+
+    public function visionmission()
+    {
+        return view('visionmission');
+    }
 }

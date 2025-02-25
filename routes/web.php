@@ -24,6 +24,8 @@ Route::get('/officialstwo', [PageMover::class, 'officialstwo'])->name('page.offi
 
 Route::get('/documentstwo', [PageMover::class, 'documentstwo'])->name('page.documentstwo');
 
+Route::get('/visionmission', [PageMover::class, 'visionmission'])->name('page.visionmission');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
