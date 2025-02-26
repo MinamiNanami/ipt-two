@@ -8,7 +8,7 @@ class PageMover extends Controller
 {
     public function home()
     {
-        return view('hometwo');
+        return view('home');
     }
 
     public function reports()
@@ -26,27 +26,18 @@ class PageMover extends Controller
         return view('documents');
     }
 
-    public function officialstwo()
-    {
-        return view('officialstwo');
-    }
-
-    public function documentstwo()
-    {
-        return view('documentstwo');
-    }
-    public function test()
-    {
-        return view('test');
-    }
-
-    public function test2()
-    {
-        return view('test2');
-    }
-
     public function visionmission()
     {
         return view('visionmission');
+    }
+
+    public function settings()
+    {
+        return view('settings');
+    }
+    
+    public function residents()
+    {
+        return view('residents');
     }
 }

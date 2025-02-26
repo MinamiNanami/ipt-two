@@ -16,15 +16,11 @@ Route::get('/reports', [PageMover::class, 'reports'])->name('page.reports');
 
 Route::get('/documents', [PageMover::class, 'documents'])->name('page.documents');
 
-Route::get('/test', [PageMover::class, 'test'])->name('page.test');
-
-Route::get('/test2', [PageMover::class, 'test2'])->name('page.test2');
-
-Route::get('/officialstwo', [PageMover::class, 'officialstwo'])->name('page.officialstwo');
-
-Route::get('/documentstwo', [PageMover::class, 'documentstwo'])->name('page.documentstwo');
-
 Route::get('/visionmission', [PageMover::class, 'visionmission'])->name('page.visionmission');
+
+Route::get('/settings', [PageMover::class, 'settings'])->name('page.settings');
+
+Route::get('/residents', [PageMover::class, 'residents'])->name('page.residents');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -104,14 +104,79 @@ body {
 /* Content Section (Right Panel) */
 .content {
     flex: 1;
-    width: 60%;
+    width: 45%; /* Made smaller */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     margin: 10px;
-    margin-left: 270px;
+    margin-left: 280px;
 }
 
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffeb99;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-icon-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info div {
+    margin-bottom: 5px;
+}
+
+/* Officials Section */
+.officials-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.officials-container h3 {
+    margin-bottom: 10px;
+}
+
+.officials-list {
+    list-style: none;
+}
+
+.officials-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.officials-list li:last-child {
+    border-bottom: none;
+}
+
+.view-btn {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background-color: darkblue;
+}
 
 </style>
 <body>
@@ -132,13 +197,41 @@ body {
                 <li><img src="https://via.placeholder.com/20" alt="icon"> Barangay Certificate </li>
                 <li><img src="https://via.placeholder.com/20" alt="icon"> Blotter Record </li>
                 <li><img src="https://via.placeholder.com/20" alt="icon"> Brgy Officials | Staff </li>
+                <li><img src="https://via.placeholder.com/20" alt="icon"> Mission | Vision </li>
                 <li><img src="https://via.placeholder.com/20" alt="icon"> Settings </li>
             </ul>
         </div>
 
         <!-- Main Content -->
         <div class="content">
-            
+            <div class="profile">
+                <div class="profile-icon-large"></div>
+                <div class="profile-info">
+                    <div><strong>First Name:</strong> Wendell</div>
+                    <div><strong>Last Name:</strong> Centeno</div>
+                    <div><strong>Age:</strong> 55</div>
+                    <div><strong>Address:</strong> 123 Barangay St.</div>
+                </div>
+                <div class="profile-info">
+                    <div><strong>Middle Name:</strong> G.</div>
+                    <div><strong>Birth Date:</strong> 01/01/1970</div>
+                    <div><strong>Gender:</strong> Male</div>
+                    <div><strong>Contact:</strong> 09123456789</div>
+                </div>
+            </div>
+
+            <div class="officials-container">
+                <h3>Barangay Konsehal</h3>
+                <ul class="officials-list">
+                    <li>1 - John Doe <button class="view-btn">View</button></li>
+                    <li>2 - Jane Smith <button class="view-btn">View</button></li>
+                    <li>3 - Alice Brown <button class="view-btn">View</button></li>
+                    <li>4 - Bob White <button class="view-btn">View</button></li>
+                    <li>5 - Charlie Green <button class="view-btn">View</button></li>
+                    <li>6 - Michael Lee <button class="view-btn">View</button></li>
+                    <li>7 - Sophia Cruz <button class="view-btn">View</button></li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
