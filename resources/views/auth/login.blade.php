@@ -2,6 +2,7 @@
     <div class="header">BRGY. STA BARBARA MANAGEMENT SYSTEM</div>
 
     <!-- logo -->
+     
     <div class="main-container">
         <div class="form-image">
             <img src="{{ asset('images/brgy-sta-barbara-logo.jpg') }}" alt="Barangay Logo">
