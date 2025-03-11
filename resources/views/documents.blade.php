@@ -33,26 +33,24 @@
             <th> Name </th>
             <th> Form </th>
             <th> Date </th>
-            <th> </th>
+            <th> Action </th>
+            <th>  </th>
         </tr>
+        @foreach ($documents as $document)
         <tr>
-            <td> Juan Dela Cruz </td>
-            <td> Brgy. clearance </td>
-            <td> 01/01/2000 </td>
+            <td> {{ $document->name }} </td>
+            <td> {{ $document->form }}</td>
+            <td> {{ $document->date }}</td>
             <td> <button class="view-btn"> VIEW </button></td>
+            <td>
+            <form method="post" action="{{route('page.destroyDocument', ['document' => $document])}}">
+                @csrf 
+                @method('delete')
+                <input type="submit" value="Delete">
+            </form></td>
         </tr>
-        <tr>
-            <td> Maria Clara </td>
-            <td> Brgy. Indigency </td>
-            <td> 01/01/2000 </td>
-            <td> <button class="view-btn"> VIEW </button></td>
-        </tr>
-        <tr>
-            <td> Juan Dela Cruz </td>
-            <td> Brgy. clearance </td>
-            <td> 01/01/2004 </td>
-            <td> <button class="view-btn"> VIEW </button></td>
-        </tr>
+        @endforeach
     </table>
+    <a href="{{route('page.addDocument')}}">Add Document History</a>
 </div>
 @endsection

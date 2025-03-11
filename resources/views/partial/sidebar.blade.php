@@ -1,9 +1,21 @@
 <ul>
-    <li><a href="home"><img src="{{ asset('images/dashboardIcon.png') }}" alt="icon"> &nbsp; Dashboard </a></li>
-    <li><a href="residents"><img src="{{ asset('images/residentsIcon.png') }}" alt="icon"> &nbsp; List of Residents </a></li>
-    <li><a href="documents"><img src="{{ asset('images/documentIcon.png') }}" alt="icon"> &nbsp; Barangay Certificate </a></li>
-    <li><a href="reports"><img src="{{ asset('images/blotterIcon.png') }}" alt="icon"> &nbsp; Blotter Record </a></li>
-    <li><a href="officials"><img src="{{ asset('images/officialsIcon.png') }}" alt="icon"> &nbsp; Brgy Officials | Staff </a></li>
-    <li><a href="visionmission"><img src="{{ asset('images/officialsIcon.png') }}" alt="icon"> &nbsp; Mission | Vision  </a></li>
-    <li><a href="settings"><img src="{{ asset('images/settingsIcon.png') }}" alt="icon"> &nbsp; Settings </a></li>
+    <li><a href="home"> &nbsp;&nbsp; Dashboard </a></li>
+    <li><a href="residents"> &nbsp;&nbsp; List of Residents </a></li>
+    <li><a href="documents">&nbsp;&nbsp; Barangay Certificate </a></li>
+    <li><a href="reports"> &nbsp;&nbsp; Blotter Record </a></li>
+    <li><a href="officials"> &nbsp;&nbsp; Brgy Officials | Staff </a></li>
+    <li><a href="visionmission"> &nbsp;&nbsp; Mission | Vision  </a></li>
+    <li><a href="settings"> &nbsp;&nbsp; Administrator </a></li>
 </ul>
+
+
+<form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <a href="{{route('logout')}}" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+        <div class="logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+        </div>
+        <p>LOG OUT</p>
+    </a>
+</form> <!-- oks na -->

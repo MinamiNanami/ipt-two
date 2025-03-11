@@ -1,0 +1,19 @@
+/* Heading */
+h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Submit Button */

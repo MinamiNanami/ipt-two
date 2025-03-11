@@ -33,6 +33,14 @@
 
 <div class="section-header-bottom">BLOTTER HISTRORY</div>
 
+<div> <!-- Added Success Catcher -->
+    @if(session()->has('success'))
+        <div>
+            {{session('success')}}
+        </div>
+    @endif
+</div>
+
 <table>
     <thead>
         <tr>
@@ -42,34 +50,30 @@
             <th>Date</th>
             <th>Status</th>
             <th>Action</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
+        @foreach($blotters as $blotter)
         <tr>
-            <td>001</td>
-            <td id="name"> Juan Dela Cruz</td>
-            <td id="incident"> Accident</td>
-            <td id="date"> 01/03/0003 </td>
-            <td id="status"><span class="status-label active-status">Active</span></td>
+            <td>{{ $blotter->case_number }}</td>
+            <td>{{ $blotter->name }}</td>
+            <td>{{ $blotter->incident }}</td>
+            <td>{{ $blotter->date }}</td>
+            <td>{{ $blotter->status }}</span></td>
             <td><button class="view-btn">View</button></td>
-        </tr>
-        <tr>
-            <td>002</td>
-            <td id="name">Juan Dela Cruz</td>
-            <td id="incident">Accident</td>
-            <td id="date"> 01/02/0001 </td>
-            <td id="status"><span class="status-label settled-status">Settled</span></td>
-            <td><button class="view-btn">View</button></td>
-        </tr>
-        <tr>
-            <td>003</td>
-            <td id="name">Juan Dela Cruz</td>
-            <td id="incident">Accident</td>
-            <td id="date"> 01/01/0000 </td>
-            <td id="status"><span class="status-label scheduled-status">Scheduled</span></td>
-            <td><button class="view-btn">View</button></td>
-        </tr>
+            <td>
+            <form method="post" action="{{route('page.destroyBlotter', ['blotter' => $blotter])}}">
+                @csrf 
+                @method('delete')
+                <input type="submit" value="Delete">
+            </form>
+            </td>
+        </tr> 
+        @endforeach
     </tbody>
 </table>
+
+<a href="{{route('page.addBlotter')}}">Add Blotter</a>
 
 @endsection

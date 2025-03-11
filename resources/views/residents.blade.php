@@ -9,17 +9,17 @@
 <div class="section-header">LIST OF RESIDENTS </div>
 <div class="summary-boxes">
     <div class="summary-box">
-        <img src="icon.png" alt="all icon">
+        <img src="{{ asset('images/allicon.png') }}" alt="all icon">
         <p> TOTAL POPULATION </p>
         <span>2</span>
     </div>
     <div class="summary-box">
-        <img src="icon.png" alt="male icon">
+        <img src="{{ asset('images/allmaleicon.png') }}" alt="male icon">
         <p> MALE </p>
         <span>1</span>
     </div>
     <div class="summary-box">
-        <img src="icon.png" alt="woman icon">
+        <img src="{{ asset('images/allwomanicon.png') }}" alt="woman icon">
         <p> FEMALE </p>
         <span> 0 </span>
     </div>
@@ -36,26 +36,28 @@
             <th> Contact </th>
             <th> Gender </th>
             <th> Action </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
+        @foreach ($residents as $resident)
         <tr>
-            <td> 001 </td>
-            <td> Juan Dela Cruz </td>
-            <td> Somewhere </td>
-            <td> 01/03/0003 </td>
-            <td><span class="status-label active-status"> Male </span></td>
+            <td> {{ $resident->resident_id }} </td>
+            <td> {{ $resident->name }} </td>
+            <td> {{ $resident->address }} </td>
+            <td> {{ $resident->contact }} </td>
+            <td> {{ $resident->gender }} </span></td>
             <td><button class="view-btn"> View </button></td>
+            <td><form method="post" action="{{route('page.destroyResident', ['resident' => $resident])}}">
+                @csrf 
+                @method('delete')
+                <input type="submit" value="Delete"></td>
+            </form>
         </tr>
-        <tr>
-            <td>002</td>
-            <td> Asawa ni Juan Dela Cruz </td>
-            <td> Somewhat</td>
-            <td> 01/02/0001 </td>
-            <td><span class="status-label settled-status"> Female </span></td>
-            <td><button class="view-btn"> View </button></td>
-        </tr>
+        @endforeach
     </tbody>
 </table>
+
+<a href="{{route('page.addResident')}}">Add Resident</a>
 
 @endsection

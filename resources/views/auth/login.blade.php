@@ -24,9 +24,9 @@
                 <input type="checkbox" id="remember" name="remember">
                 <label for="remember" class="ml-2">Remember me</label>
             </div>
-
+            
             <button type="submit">Log In</button>
-
+            
             <div class="guest-helper">
                 <p>Don't have an account? <a href="{{ route('register') }}">Register here</a></p>
                 <a href="{{ route('password.request') }}">Forgot Password?</a>
