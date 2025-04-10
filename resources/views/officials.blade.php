@@ -8,41 +8,41 @@
 <!-- Barangay Captain Section -->
 <div class="captain-section">
     <div class="profile-picture">
-        <img src="https://via.placeholder.com/100" alt="Profile">
+        <img src="{{ asset('images/kapitanimage.jpg') }}" alt="Profile">
         <p>BRGY. Captain</p>
     </div>
     <div class="captain-info">
         <div class="info-row">
             <label>First Name:</label>
-            <input type="text" value="Wendell" readonly>
+            <input type="text" value="Wendell" disabled>
         </div>
         <div class="info-row">
             <label>Middle Name:</label>
-            <input type="text" value="G." readonly>
+            <input type="text" value="G." disabled>
         </div>
         <div class="info-row">
             <label>Last Name:</label>
-            <input type="text" value="Centeno" readonly>
+            <input type="text" value="Centeno" disabled>
         </div>
         <div class="info-row">
             <label>Birth Date:</label>
-            <input type="text" value="01/01/1970" readonly>
+            <input type="text" value="01/01/1970" disabled>
         </div>
         <div class="info-row">
             <label>Age:</label>
-            <input type="text" value="55" readonly>
+            <input type="text" value="55" disabled>
         </div>
         <div class="info-row">
             <label>Gender:</label>
-            <input type="text" value="Male" readonly>
+            <input type="text" value="Male" disabled>
         </div>
         <div class="info-row">
             <label>Address:</label>
-            <input type="text" value="123 Barangay St." readonly>
+            <input type="text" value="123 Barangay St." disabled>
         </div>
         <div class="info-row">
             <label>Contact:</label>
-            <input type="text" value="09123456789" readonly>
+            <input type="text" value="09123456789" disabled>
         </div>
     </div>
 </div>

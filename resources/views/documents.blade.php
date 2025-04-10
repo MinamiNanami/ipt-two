@@ -20,7 +20,7 @@
         <img src="{{ asset('images/blackDocument.png') }}" alt="Brgy. Indigency">
         <p>BGRY. INDIGENCY</p>
     </div>
-</div>
+</div> 
 <div class="section-header"> ISSUED FORMS | DOCUMENTS </div>
 
 <!-- Table for issued forms -->

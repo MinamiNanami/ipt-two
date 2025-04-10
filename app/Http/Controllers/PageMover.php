@@ -16,9 +16,19 @@ class PageMover extends Controller
         return view('welcome');
     }
 
-    public function home()
+    /*public function home()
     {
         return view('home');
+    }*/
+
+    public function adminHome()
+    {
+        return view('dashboards.admin');
+    }
+
+    public function userHome()
+    {
+        return view('dashboards.user');
     }
 
     public function reports()
@@ -128,11 +138,11 @@ class PageMover extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'form' => 'required|string|max:255', 
+            'form' => 'required|string|max:255',
             'date' => 'required|date',
         ]);
-        
-        $document = Document::create([ 
+
+        $document = Document::create([
             'name' => $request->name,
             'form' => $request->form,
             'date' => $request->date,
@@ -146,5 +156,4 @@ class PageMover extends Controller
         $document->delete();
         return redirect()->route('page.documents')->with('success', 'Deleted successfully');
     }
-
 }

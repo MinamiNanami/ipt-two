@@ -10,7 +10,19 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', [PageMover::class, 'home'])->name('page.home');
+// Admin Home (Restricted to 'admin' role)
+Route::middleware(['auth', 'role:admin'])->get('/admin/home', [PageMover::class, 'adminHome'])
+    ->name('admin.home');
+
+// User Home (Restricted to 'user' role)
+Route::middleware(['auth', 'role:user'])->get('/user/home', [PageMover::class, 'userHome'])
+    ->name('user.home');
+
+Route::middleware(['auth'])->get('/dashboard', function () {
+    return Auth::user()->role === 'admin' 
+        ? redirect()->route('home.admin') 
+        : redirect()->route('home.user');
+});
 
 Route::get('/officials', [PageMover::class, 'officials'])->name('page.officials');
 
@@ -50,4 +62,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
